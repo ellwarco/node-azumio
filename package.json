@@ -4,7 +4,7 @@
   "description": "Library to easily access Azumio checkin data.",
   "main": "azumio.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --compilers js:traceurified-mocha test/test*.js",
     "prepublish": "traceur --modules commonjs --script azumio.es6.js --out azumio.dist.js"
   },
   "repository": {
@@ -28,10 +28,15 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "bluebird": "^2.2.2",
     "request": "^2.40.0"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "nock": "^0.44.1",
     "traceur": "0.0.55",
-    "traceurified": "0.0.3"
+    "traceurified": "0.0.3",
+    "traceurified-mocha": "0.0.1"
   }
 }

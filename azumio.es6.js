@@ -1,5 +1,18 @@
+"use strict";
+
+var Promise = require("bluebird");
 var request = require("request");
 
-var foo = (bar) => console.log(bar);
+class Azumio {
+  constructor(email, password) {
+    if (!email || !password) {
+      throw new Error("Email and password are required.");
+    }
+  }
 
-foo("yay");
+  _request() {
+    
+  }
+}
+
+module.exports = Azumio;

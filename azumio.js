@@ -8,10 +8,10 @@ var fs = require("fs"),
     path = require("path");
 
 if (fs.existsSync(path.join(__dirname, "azumio.dist.js"))) {
-  return require("./azumio.dist");
+  module.exports = require("./azumio.dist");
 } else {
   require("traceurified")(function(file) {
     return file.indexOf("node_modules") < 0;
   });
-  return require("./azumio.es6");
+  module.exports = require("./azumio.es6");
 }
