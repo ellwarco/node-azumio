@@ -1,0 +1,29 @@
+{
+  "name": "azumio",
+  "version": "0.0.0",
+  "description": "Library to easily access Azumio checkin data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samcday/node-azumio.git"
+  },
+  "keywords": [
+    "azumio",
+    "data",
+    "api",
+    "checkins",
+    "heartrate"
+  ],
+  "author": "Sam Day <me@samcday.com.au>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samcday/node-azumio/issues"
+  },
+  "homepage": "https://github.com/samcday/node-azumio",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
