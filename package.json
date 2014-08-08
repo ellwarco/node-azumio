@@ -2,9 +2,10 @@
   "name": "azumio",
   "version": "0.0.0",
   "description": "Library to easily access Azumio checkin data.",
-  "main": "index.js",
+  "main": "azumio.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "traceur --modules commonjs --script azumio.es6.js --out azumio.dist.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,12 @@
   "homepage": "https://github.com/samcday/node-azumio",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "request": "^2.40.0"
+  },
+  "devDependencies": {
+    "traceur": "0.0.55",
+    "traceurified": "0.0.3"
   }
 }

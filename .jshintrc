@@ -1,0 +1,18 @@
+{
+  "node": true,
+  "esnext": true,
+  "unused": true,
+  "strict": true,
+  "eqeqeq": true,
+  "latedef": true,
+
+  "globals": {
+    "describe"   : false,
+    "it"         : false,
+    "xit"        : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false
+  }
+}
