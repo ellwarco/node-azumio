@@ -48,6 +48,7 @@ class Azumio {
         qs,
         headers: {
           Cookie: `oath_token_azumio=${this.authToken}`,
+          "Content-Type": "application/json",
         },
         json: true,
       });
