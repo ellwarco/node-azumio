@@ -21,6 +21,6 @@ describe("Azumio", () => {
   it("performs login on first request", () => {
     var azumio = new Azumio("user", "pass");
 
-    azumio.heartrate();
+    return azumio.heartrate();
   });
 });

@@ -8,6 +8,7 @@ var fs = require("fs"),
     path = require("path");
 
 if (fs.existsSync(path.join(__dirname, "azumio.dist.js"))) {
+  require("traceur/bin/traceur-runtime");
   module.exports = require("./azumio.dist");
 } else {
   require("traceurified")(function(file) {
