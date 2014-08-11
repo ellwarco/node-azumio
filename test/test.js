@@ -60,4 +60,34 @@ describe("Azumio", () => {
       expect(result).to.eql("it works");
     });
   });
+
+  it("returns heartrate data correctly", () => {
+    var azumio = new Azumio("user", "pass");
+
+    nock(azumio.baseUrl)
+      .filteringPath(/\?.*$/, "?_query_")
+      .get("/v2/checkins.csv?_query_")
+      .reply(200, {
+        hasMore: true,
+        checkins: [
+          {
+            value: 123,
+            tags: ["foo"],
+            timestamp: 321,
+          }
+        ]
+      });
+
+    azumio.authToken = "test-token";
+
+    return azumio.heartrate().then(function(result) {
+      expect(result.hasMore).to.be.true;
+      expect(result).to.have.length(1);
+      expect(result[0]).to.eql({
+        rate: 123,
+        timestamp: 321,
+        tags: ["foo"]
+      });
+    });
+  });
 });

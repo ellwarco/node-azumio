@@ -67,7 +67,17 @@ class Azumio {
       _expand: "none",
     });
 
-    return responsePromise.nodeify(callback);
+    return responsePromise.then(function(response) {
+      var data = response.checkins.map(checkin => ({
+        tags: checkin.tags,
+        timestamp: checkin.timestamp,
+        rate: checkin.value
+        // TODO: notes?
+      }));
+
+      data.hasMore = response.hasMore;
+      return data;
+    }).nodeify(callback);
   }
 }
 
