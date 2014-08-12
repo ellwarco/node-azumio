@@ -3,3 +3,4 @@ test/
 .jshintrc
 .npmignore
 azumio.es6.js
+traceurified-mocha-filter.js
