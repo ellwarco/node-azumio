@@ -1,6 +1,6 @@
 {
   "name": "azumio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Library to easily access Azumio checkin data.",
   "main": "azumio.js",
   "scripts": {
