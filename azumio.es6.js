@@ -69,6 +69,7 @@ class Azumio {
 
     return responsePromise.then(function(response) {
       var data = response.checkins.map(checkin => ({
+        id: checkin.id,
         tags: checkin.tags,
         timestamp: checkin.timestamp,
         rate: checkin.value
