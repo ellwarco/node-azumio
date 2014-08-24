@@ -38,7 +38,7 @@
     "chai": "^1.9.1",
     "mocha": "^1.21.4",
     "nock": "^0.44.1",
-    "traceurified": "0.0.3",
+    "traceurified": "0.0.5",
     "traceurified-mocha": "0.0.1"
   }
 }
