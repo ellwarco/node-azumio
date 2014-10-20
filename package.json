@@ -2,11 +2,9 @@
   "name": "azumio",
   "version": "0.0.1",
   "description": "Library to easily access Azumio checkin data.",
-  "main": "azumio.js",
+  "main": "bootstrap.js",
   "scripts": {
-    "test": "mocha --compilers js:traceurified-mocha test/test*.js",
-    "pretest": "[[ ! -z $npm_config_dist ]] && traceur --modules commonjs --script azumio.es6.js --out azumio.dist.js || true",
-    "prepublish": "traceur --modules commonjs --script azumio.es6.js --out azumio.dist.js"
+    "test": "mocha --compilers js:traceurified-mocha test/test*.js"
   },
   "repository": {
     "type": "git",
@@ -25,20 +23,21 @@
     "url": "https://github.com/samcday/node-azumio/issues"
   },
   "homepage": "https://github.com/samcday/node-azumio",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "dependencies": {
     "bluebird": "^2.2.2",
     "request": "^2.40.0",
     "tough-cookie": "^0.12.1",
-    "traceur": "0.0.55"
+    "traceurified-module-runtime": "0.0.1"
   },
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.21.4",
     "nock": "^0.44.1",
-    "traceurified": "0.0.5",
-    "traceurified-mocha": "0.0.1"
+    "traceurified-module": "0.0.1"
+  },
+  "traceurified": {
+    "files": [
+      "azumio.js"
+    ]
   }
 }
