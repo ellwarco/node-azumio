@@ -27,8 +27,8 @@ class Azumio {
       // Look for the oath_token_azumio cookie. If it's not there,
       // login was incorrect, or something is wrong.
       var cookies = response.headers["set-cookie"];
-      var oauthToken = cookies
-        .map(rawCookie => tough.parse(rawCookie))
+      var oauthToken = Array.from(cookies
+        .map(rawCookie => tough.parse(rawCookie)))
         .find(cookie => cookie.key === "oath_token_azumio")
         .value;
 
