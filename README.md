@@ -6,4 +6,4 @@ node-azumio
 Library to easily access Azumio checkin data.
 
 [badge-travis-img]: https://img.shields.io/travis/samcday/node-azumio.svg?style=flat-square
-[badge-travis-img]: https://travis-ci.org/samcday/node-azumio
+[badge-travis-url]: https://travis-ci.org/samcday/node-azumio
